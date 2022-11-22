@@ -1,0 +1,33 @@
+
+
+/* iOS places the subtitle above the title */
+ion-card-header.ios {
+  display: flex;
+  flex-flow: column-reverse;
+  height: 100px;
+}
+ion-button {
+  --background: #0a0a0a;
+  --background-hover: #0a0a0a;
+  --background-activated: #0a0a0a
+  --background-focused: #0a0a0a;
+
+  --color: WHITE;
+
+  --ripple-color: deeppink;
+
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}
+  
+.price{
+  color: #161214;
+   font-size: larger;
+   font-style: bold;
+  --padding-bottom: 10px;
+  --padding-top:10px
+  background-origin: padding-box;
+  background-color: rgb(247, 240, 240);
+
+
+}

@@ -1,0 +1,70 @@
+<ion-toolbar id="search-toolbar">
+
+  <ion-buttons slot="start">
+    <ion-menu-button auto-hide="false"></ion-menu-button>
+  </ion-buttons>
+  <ion-title>Menu</ion-title>
+</ion-toolbar>
+
+<ion-footer>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="schedule">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Schedule</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+
+      <ion-tab-button tab="speakers">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Speakers</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="map">
+        <ion-icon name="map"></ion-icon>
+        <ion-label>Map</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="about">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>About</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-footer>
+
+
+
+
+<ion-content>
+
+
+  <ion-searchbar placeholder="Search your product ..."></ion-searchbar>
+  <!-- <ion-icon id="categories">
+           <ion-button aria-placeholder="category"></ion-button>
+        </ion-icon> -->
+
+
+
+  <ion-button fill="Solid">ALL</ion-button>
+  <ion-button fill="Solid">PHONES</ion-button>
+  <ion-button fill="Solid">LAPTOPS</ion-button>
+  <ion-button fill="Solid">OTHER</ion-button>
+  <!-- <app-home title="Categories"></app-home> -->
+
+
+  <ion-card *ngFor="let product of products">
+
+    <img alt="" [src]="product.thumbnail" />
+    <ion-card-header>
+      <ion-card-title>{{product.title}}</ion-card-title>
+      <ion-card-subtitle>{{product.description}}</ion-card-subtitle>
+
+      <ion-item>
+        <p class="price">{{product.price | currency:'ZAR'}}</p>
+      </ion-item>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
+
+<!-- Changes -->
